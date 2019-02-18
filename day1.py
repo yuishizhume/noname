@@ -26,3 +26,27 @@ print '\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')
 print u'你好啊，%s'%u'使用者'
 #格式化还可以指定补0和取多少位%0（总位数.（小数点位数
 '%08.3f'%3.1415926535897932254626
+
+#list创建与增删改
+classmates=['Jack','Bob','Adam']
+classmates
+len(classmates)
+classmates[0],classmates[-1]=classmates[-1],classmates[0]
+classmates
+classmates.append('Micheal')
+classmates
+classmates.insert(2,'Cirra')
+classmates
+classmates.pop()
+classmates.pop(2)
+classmates[2]='Sarah'
+classmates
+#list元素也可以是其他数据类型或者又一个list
+L=['Apple',123,True]
+p=['asp','php']
+s=['python','java',p,'scheme']
+p[1]==s[2][1]
+
+#tuple(不可变的list)
+classmates=('Jack','Bob','Adam')
+t=(1,)
