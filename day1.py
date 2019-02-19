@@ -50,3 +50,36 @@ p[1]==s[2][1]
 #tuple(不可变的list)
 classmates=('Jack','Bob','Adam')
 t=(1,)
+
+#条件判断与循环
+age=2
+if age>=18:
+    print 'your age is',age
+    print 'adult'
+elif age>=12:
+    print 'your age is',age
+    print 'teenager'
+elif age>=6:
+    print 'your age is',age
+    print 'kid'
+else:
+    print 'your age is',age
+    print 'baby'
+names=['Macheal','Bob','Tracy']
+for name in names:
+    print name
+sum=0
+for x in range(10):#注意数字范围是小于10
+    sum+=x
+print sum
+sum=0#计算100以内奇数和
+n=99
+while n>0:
+    sum+=n;
+    n=n-2;
+print sum
+birth=int(input('please enter your birth year:'))
+if birth<2000:
+    print'00前'
+else:
+    print'00后'
