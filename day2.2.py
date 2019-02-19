@@ -92,7 +92,7 @@ for k, v in d.iteritems():
 #因此，列表生成式也可以使用两个变量来生成list
 d = {'x': 'A', 'y': 'B', 'z': 'C' }
 [k + '=' + v for k, v in d.iteritems()]
-#最后把一个list中所有的字符串变成小写：
+#把一个list中所有的字符串变成小写：
 L = ['Hello', 'World', 'IBM', 'Apple']
 [s.lower() for s in L]
 
