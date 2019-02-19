@@ -129,3 +129,22 @@ func(*args, **kw)
 **kw是关键字参数，kw接收的是一个dict。
 使用*args和**kw是Python的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。
 '''
+
+#递归函数
+#一个函数在内部调用自身本身，这个函数就是递归函数
+def fact(n):
+    if n==1:
+        return 1
+    return n * fact(n - 1)#计算阶乘n!
+fact(100)
+#fact(1000)#会溢出
+#上面的fact(n)函数由于return n * fact(n - 1)引入了乘法表达式
+#所以就不是尾递归了。要改成尾递归方式，需要多一点代码
+def fact(n):
+    return fact_iter(n, 1)
+def fact_iter(num, product):
+    if num == 1:
+        return product
+    return fact_iter(num - 1, num * product)
+fact(1000)
+#遗憾的是，大多数编程语言没有针对尾递归做优化，Python解释器也没有做优化，所以，即使把上面的fact(n)函数改成尾递归方式，也会导致栈溢出。
