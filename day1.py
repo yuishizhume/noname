@@ -83,3 +83,43 @@ if birth<2000:
     print'00前'
 else:
     print'00后'
+
+#使用dict和set
+
+#dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+d['Michael']
+d['Adam'] = 67
+d['Adam']
+d['Adam'] = 63
+d['Adam']#一个key只对应一个value
+'Thomas' in d#判断是否存在，否则访问会报错
+d.get('Thomas')#返回None的时候Python的交互式命令行不显示结果。
+d.get('Thomas', -1)
+d.pop('Bob')#dict内部存放的顺序和key放入的顺序是没有关系的
+d
+#和list比较，dict有以下几个特点：
+#查找和插入的速度极快，不会随着key的增加而增加；
+#需要占用大量的内存，内存浪费多。
+#而list相反：
+#查找和插入的时间随着元素的增加而增加；
+#占用空间小，浪费内存很少。
+#需要牢记的第一条就是dict的key必须是不可变对象。
+
+#set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。
+s = set([1, 1, 2, 2, 3, 3])
+s
+#set可以看成数学意义上的无序和无重复元素的集合，因此，两个set可以做数学意义上的交集、并集等操作
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
+s1 & s2
+s1 | s2
+
+#再议不可变对象
+a = ['c', 'b', 'a']
+a.sort()
+a
+a = 'abc'
+b = a.replace('a', 'A')
+a
+b
