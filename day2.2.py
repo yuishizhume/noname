@@ -67,7 +67,37 @@ for x, y in [(1, 1), (2, 4), (3, 9)]:
     print x, y
 
 #小结
-'''
-任何可迭代对象都可以作用于for循环，包括我们自定义的数据类型，
-只要符合迭代条件，就可以使用for循环。
-'''
+
+#任何可迭代对象都可以作用于for循环，包括我们自定义的数据类型，
+#只要符合迭代条件，就可以使用for循环。
+
+
+#列表生成式
+#列表生成式即List Comprehensions
+#是Python内置的非常简单却强大的可以用来创建list的生成式
+range(1, 11)
+[x * x for x in range(1, 11)]
+[x * x for x in range(1, 11) if x % 2 == 0]
+#筛选出仅偶数的平方
+#还可以使用两层循环，可以生成全排列
+[m + n for m in 'ABC' for n in 'XYZ']
+#三层和三层以上的循环就很少用到了。
+import os # 导入os模块，模块的概念后面讲到
+[d for d in os.listdir('.')] # os.listdir可以列出文件和目录
+#for循环其实可以同时使用两个甚至多个变量
+#比如dict的iteritems()可以同时迭代key和value
+d = {'x': 'A', 'y': 'B', 'z': 'C' }
+for k, v in d.iteritems():
+    print k, '=', v
+#因此，列表生成式也可以使用两个变量来生成list
+d = {'x': 'A', 'y': 'B', 'z': 'C' }
+[k + '=' + v for k, v in d.iteritems()]
+#最后把一个list中所有的字符串变成小写：
+L = ['Hello', 'World', 'IBM', 'Apple']
+[s.lower() for s in L]
+
+
+#小结
+#运用列表生成式，可以快速生成list，可以通过一个list推导出另一个list，而代码却十分简洁。
+
+
