@@ -31,3 +31,19 @@ day2.2 ：
 #创建一个generator
 #打印出generator的每一个元素呢
 #著名的斐波拉契数列（Fibonacci）
+
+day3 ：
+#函数式编程
+#高阶函数
+#传入函数
+#map/reduce
+#filter
+#sorted
+#返回函数
+#闭包
+#匿名函数
+
+day4 ：
+#装饰器
+#functools.wrap
+##偏函数
